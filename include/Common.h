@@ -47,12 +47,17 @@ typedef struct _INSTANCE {
         //
         D_API( MessageBoxW )
 
+        //
+        // Advapi32.dll
+        //
+        D_API( CreateProcessWithLogonW )
     } Win32;
 
     struct {
         PVOID Ntdll;
         PVOID Kernel32;
         PVOID User32;
+        PVOID Advapi32;
     } Modules;
 
 } INSTANCE, *PINSTANCE;
